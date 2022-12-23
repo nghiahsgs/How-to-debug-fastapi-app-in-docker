@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  testdebugflaskapp:
+    image: testdebugfastapi
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+
+    volumes:
+      - .:/home/app
+    ports:
+      - 5678:5678
+      - 3001:3001
